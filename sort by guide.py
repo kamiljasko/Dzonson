@@ -1,5 +1,16 @@
 def sort_by_guide(arr, guide):
-    return
+    output = []
+    for i in range(len(arr)):
+        output.append('*')
+    for number_index in range(len(arr)):
+        if guide[number_index] == -1:
+            output[number_index] = arr[number_index]
+        else:
+            output[guide[number_index]-1] = arr[number_index]
+    print(output)
+
+
+
 
 if __name__ == '__main__':
     assert(sort_by_guide([56, 78, 3, 45, 4, 66, 2, 2, 4], [3, 1, -1, -1, 2, -1, 4, -1, 5]) ==
