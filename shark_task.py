@@ -1,8 +1,8 @@
 def shark(pontoon_distance, shark_distance, you_speed, shark_speed, dolphin):
     mytime = pontoon_distance / you_speed
-    sharktime = shark_distance / shark_speed
     if dolphin == True:
-        sharktime = sharktime / 2
+        shark_speed = shark_speed / 2
+    sharktime = shark_distance / shark_speed
     if mytime >= sharktime:
         return "Shark bait!"
     else:
